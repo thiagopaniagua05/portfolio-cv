@@ -154,41 +154,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'seguimiento-flota',
-    name: 'Seguimiento de flota',
-    kind: 'API',
-    short: 'Jornadas de choferes, posición en vivo y cálculo de kilómetros y paradas.',
-    tags: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
-    preview: { kind: 'map', bg: 'linear-gradient(160deg, #E6ECF5, #F4F6FA)' },
-    confidential: true,
-    pitch: 'El dueño de una empresa de transporte ve dónde está cada camión, cuántos kilómetros hizo cada chofer y dónde paró.',
-    platforms: 'API y tiempo real',
-    problem:
-      'Las jornadas se anotaban en papel y no había forma de saber el recorrido real ni las horas de cada chofer.',
-    built: [
-      'Inicio y fin de jornada desde el celular del chofer, eligiendo el camión.',
-      'Posición en vivo para el dueño y recorrido completo de cada jornada.',
-      'Cálculo de kilómetros, detección de paradas y de cortes de señal.',
-      'Simulador de viajes para probar sin salir a la ruta.',
-    ],
-    architecture: {
-      flow: [
-        { name: 'Celular del chofer', tech: 'Envía la ubicación' },
-        { name: 'API y tiempo real', tech: 'Node.js, Express, Socket.io', main: true },
-        { name: 'Base de datos', tech: 'PostgreSQL' },
-      ],
-      deploy: 'Base de datos local con Docker Compose y esquema que se aplica solo al iniciar.',
-    },
-    decisions: [
-      'Limpieza de puntos GPS imprecisos y simplificación del trazado antes de guardar el resumen.',
-      'Cálculo de distancia con la fórmula de Haversine.',
-      'Tests sobre los cálculos geográficos.',
-      'Sesión larga para el chofer: inicia sesión una sola vez.',
-    ],
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'Socket.io', 'JWT', 'Docker'],
-    demos: [{ kind: 'route', label: 'Simulación del mapa del dueño' }],
-  },
-  {
     slug: 'budgetflow',
     name: 'BudgetFlow',
     kind: 'App mobile',

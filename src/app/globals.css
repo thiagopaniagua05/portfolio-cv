@@ -1711,3 +1711,25 @@ html.viewer-open {
   .top-back, .brand { white-space: nowrap; }
   .top-back + .brand .brand-name { display: none; }
 }
+
+/* El inicio ocupa toda la primera pantalla (sin asomar el stack) */
+@media (min-width: 900px) and (min-height: 560px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 69px);
+    min-height: calc(100svh - 69px);
+  }
+  .hero-in { padding-block: 64px; }
+}
+
+/* 5 proyectos sin huecos: 3 arriba y 2 abajo (computadora), 2 + 2 + 1 (tablet) */
+@media (min-width: 1000px) {
+  .proj-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .proj-grid > .pcard { grid-column: span 2; }
+  .proj-grid > .pcard:nth-child(n + 4) { grid-column: span 3; }
+}
+@media (min-width: 680px) and (max-width: 999px) {
+  .proj-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proj-grid > .pcard:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
