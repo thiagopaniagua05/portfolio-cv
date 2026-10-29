@@ -205,17 +205,38 @@ a {
 
 .top-links {
   display: flex;
-  gap: 26px;
+  gap: 6px;
 }
 
 .nav-link {
+  padding: 7px 12px;
+  border-radius: 8px;
   color: var(--muted);
   font-size: 15px;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 .nav-link:hover {
+  color: var(--ink);
+  background: #eef1f5;
+}
+/* Sección actual: rectángulo negro */
+.nav-link.is-active {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 500;
+}
+.menu-panel a.is-active {
   color: var(--blue);
+}
+.menu-panel a.is-active::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 10px 3px 0;
+  border-radius: 2px;
+  background: var(--navy);
 }
 
 .menu-btn {
