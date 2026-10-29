@@ -1700,3 +1700,14 @@ html.viewer-open {
   .band > .wrap, .section > .wrap { padding-block: 64px; }
   .contact-in { padding-block: 64px; }
 }
+
+/* En el celular, la versión de computadora ya se ve como celular: no repetir */
+@media (max-width: 700px) {
+  .screen-desktop { display: none; }
+}
+
+/* Barra del detalle en pantallas chicas: todo en una línea */
+@media (max-width: 480px) {
+  .top-back, .brand { white-space: nowrap; }
+  .top-back + .brand .brand-name { display: none; }
+}

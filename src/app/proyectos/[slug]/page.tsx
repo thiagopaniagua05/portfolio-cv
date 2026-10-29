@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: Params) {
               {p.demos.map((d, k) => (
                 <div
                   key={d.label}
-                  className="screen-slot rise"
+                  className={`screen-slot rise ${d.kind === 'phone' && d.desktopOnly ? 'screen-desktop' : ''}`}
                   data-central={d.kind === 'laptop' && d.src.includes('/central/') ? '' : undefined}
                   style={{ animationDelay: `${0.3 + k * 0.1}s` }}
                 >

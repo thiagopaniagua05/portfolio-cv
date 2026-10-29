@@ -2,7 +2,7 @@
 
 export type Demo =
   | { kind: 'laptop'; src: string; label: string }
-  | { kind: 'phone'; src: string; label: string }
+  | { kind: 'phone'; src: string; label: string; desktopOnly?: boolean }
   | { kind: 'panic-phone'; label: string }
   | { kind: 'route'; label: string };
 
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     stack: ['Next.js', 'TypeScript', 'Payload CMS', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
     demos: [
       { kind: 'laptop', src: '/demos/concesionaria/', label: 'Sitio' },
-      { kind: 'phone', src: '/demos/concesionaria/marcas-y-modelos/', label: 'En el celular' },
+      { kind: 'phone', src: '/demos/concesionaria/marcas-y-modelos/', label: 'En el celular', desktopOnly: true },
     ],
   },
   {

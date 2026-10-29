@@ -27,7 +27,7 @@ export default function Header({ links = [], back = false }: Props) {
         ) : null}
         <a className="brand" href="/" onClick={() => setOpen(false)}>
           <span className="brand-mark" aria-hidden="true">TP</span>
-          {site.name}
+          <span className="brand-name">{site.name}</span>
         </a>
         <div className="top-links">
           {links.map((l) => (
