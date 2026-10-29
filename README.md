@@ -2,7 +2,7 @@
 
 Portfolio y CV online. Proyectos con demo en vivo y detalle de cómo está hecho cada uno.
 
-**Sitio:** https://thiagopaniagua-dev.vercel.app
+**Sitio:** https://portfolio-cv-paniagua.vercel.app
 
 ## Stack del sitio
 

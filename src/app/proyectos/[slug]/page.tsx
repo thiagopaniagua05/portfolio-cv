@@ -46,6 +46,7 @@ export default async function ProjectPage({ params }: Params) {
   const prev = projects[(i - 1 + projects.length) % projects.length];
   const next = projects[(i + 1) % projects.length];
   const small = p.demos.some((d) => d.kind !== 'laptop');
+  const phoneLast = p.demos.length === 2 && p.demos[1].kind === 'phone';
   const onlyPhone = p.demos.length === 1 && p.demos[0].kind === 'phone';
 
   return (
@@ -72,7 +73,7 @@ export default async function ProjectPage({ params }: Params) {
 
         <section id="demo" className="p-demo" aria-label="Demo en vivo">
           <div className="wrap">
-            <div className={`p-screens ${small ? 'has-small' : ''} ${onlyPhone ? 'only-phone' : ''} screens-${p.demos.length}`}>
+            <div className={`p-screens ${small ? 'has-small' : ''} ${phoneLast ? 'phone-last' : ''} ${onlyPhone ? 'only-phone' : ''} screens-${p.demos.length}`}>
               {p.demos.map((d, k) => (
                 <div
                   key={d.label}

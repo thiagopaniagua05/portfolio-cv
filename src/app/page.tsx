@@ -1,4 +1,4 @@
-import { site, stack, timeline } from '../data/site';
+import { site, stack, timeline, about } from '../data/site';
 import { projects } from '../data/projects';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
@@ -9,6 +9,7 @@ const links = [
   { href: '#stack', label: 'Stack' },
   { href: '#proyectos', label: 'Proyectos' },
   { href: '#experiencia', label: 'Experiencia' },
+  { href: '#sobre-mi', label: 'Sobre mí' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
@@ -116,6 +117,28 @@ export default function Home() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section id="sobre-mi" className="section" aria-labelledby="about-t">
+          <div className="wrap about-in">
+            <div>
+              <p className="eyebrow reveal">Quién soy</p>
+              <h2 id="about-t" className="reveal">Sobre mí</h2>
+            </div>
+            <div className="about-body">
+              {about.text.map((t) => (
+                <p key={t} className="reveal">{t}</p>
+              ))}
+              <ul className="traits">
+                {about.traits.map((t, i) => (
+                  <li key={t.title} className="trait reveal" style={{ transitionDelay: `${i * 0.06}s` }}>
+                    <h3>{t.title}</h3>
+                    <p>{t.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 

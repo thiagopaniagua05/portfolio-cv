@@ -8,7 +8,7 @@ export const site = {
   github: 'https://github.com/thiagopaniagua05',
   linkedin: 'https://www.linkedin.com/in/thiagopaniagua/',
   // Dirección pública del sitio (la que te dé Vercel o tu dominio)
-  url: 'https://thiagopaniagua-dev.vercel.app',
+  url: 'https://portfolio-cv-paniagua.vercel.app',
   cv: '/thiago-paniagua-cv.pdf',
   summary:
     'Hago aplicaciones web y mobile con React, React Native y Node.js, y ya desarrollé sistemas que hoy usan empresas reales.',
@@ -43,3 +43,17 @@ export const timeline = [
   },
   { when: 'Idiomas', title: 'Español nativo, inglés básico', place: '', text: '' },
 ];
+
+// Sección "Sobre mí"
+export const about = {
+  text: [
+    'Soy de Villa Raffo, Buenos Aires. Arranqué a programar con cursos de JavaScript y React, y hoy combino la Tecnicatura en Programación de la UTN con proyectos para clientes.',
+    'Me gusta hacerme cargo de un proyecto de punta a punta: entender qué necesita la persona, pensar cómo resolverlo y seguirlo hasta que está publicado y en uso. Lo que más me motiva es ver que algo que hice le resuelve un problema real a alguien.',
+    'Busco sumarme a un equipo donde pueda aportar lo que ya sé y seguir aprendiendo de gente con más experiencia.',
+  ],
+  traits: [
+    { title: 'De punta a punta', text: 'Del relevamiento con el cliente al código, la publicación y el mantenimiento.' },
+    { title: 'Atento al detalle', text: 'Cuido que lo que entrego funcione bien y sea cómodo de usar, en la computadora y en el celular.' },
+    { title: 'Aprendo rápido', text: 'En poco tiempo pasé de los cursos a sistemas que hoy usan empresas.' },
+  ],
+};
