@@ -1816,3 +1816,16 @@ html.viewer-open {
 html.js-reveal .trait.is-in:hover { transform: translateY(-4px); transition-duration: 0.3s; transition-delay: 0s !important; }
 .trait h3 { font-size: 16px; font-weight: 700; color: var(--ink); }
 .trait p { margin-top: 4px; font-size: 14.5px; color: var(--muted); }
+
+/* En Contacto, el botón del CV de la barra pasa a gris (abajo ya hay otro) */
+.top-cv {
+  transition: transform 0.2s var(--ease), background-color 0.45s ease, color 0.45s ease, box-shadow 0.2s;
+}
+.top-cv.is-quiet {
+  background: #eef1f5;
+  color: var(--ink);
+}
+.top-cv.is-quiet:hover {
+  background: #e3e7ee;
+  box-shadow: none;
+}

@@ -90,7 +90,7 @@ export default function Header({ links = [], back = false }: Props) {
             </a>
           ))}
         </div>
-        <a className="btn btn-dark btn-sm top-cv" href={site.cv} download>
+        <a className={`btn btn-dark btn-sm top-cv ${active === 'contacto' ? 'is-quiet' : ''}`} href={site.cv} download>
           <Icon name="download" size={16} /> Descargar CV
         </a>
         {links.length > 0 && (
