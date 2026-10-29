@@ -1,50 +1,73 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><style>
+@font-face{font-family:'RC';src:url(roboto-condensed-700.woff2);font-weight:700}
 @page{size:A4;margin:0}
-*{box-sizing:border-box}body{margin:0;font-family:'Geist','Inter','DejaVu Sans',sans-serif;color:#0b1220;font-size:10.5pt;line-height:1.45}
-.page{width:210mm;min-height:297mm;padding:16mm 16mm 14mm}
-header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #2563eb;padding-bottom:10px}
-h1{margin:0;font-size:26pt;letter-spacing:-.02em;font-weight:800}
-.role{color:#2563eb;font-weight:600;font-size:13pt;margin-top:2px}
-.contact{text-align:right;font-size:9.5pt;color:#39424f;line-height:1.6}
-.contact a{color:#0b1220;text-decoration:none}
-h2{font-size:10pt;text-transform:uppercase;letter-spacing:.08em;color:#2563eb;margin:16px 0 8px}
-p{margin:0}.muted{color:#4b5565}
-.item{margin-bottom:9px}.item-head{display:flex;justify-content:space-between;gap:12px}
-.item-head b{font-size:11pt}.when{color:#6b7485;font-size:9.5pt;white-space:nowrap}
-.place{color:#1d4ed8;font-weight:500}
-.stack{display:grid;grid-template-columns:28mm 1fr;gap:3px 10px}.stack dt{font-weight:600}.stack dd{margin:0;color:#39424f}
-ul{margin:3px 0 0;padding-left:16px}li{margin:1px 0}
-.proj b{font-size:10.5pt}.tech{color:#6b7485;font-size:9pt}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Liberation Sans',Helvetica,Arial,sans-serif;color:#111;font-size:9.6pt;line-height:1.42}
+.page{width:210mm;height:297mm;padding:15mm 18mm 12mm 20mm;overflow:hidden}
+header{display:flex;gap:22px;align-items:flex-start}
+.foto{width:46mm;height:59mm;border:5px solid #111;object-fit:cover;flex-shrink:0;display:block}
+h1{font-family:'RC';font-weight:700;font-size:34pt;line-height:1;margin:4px 0 2px;letter-spacing:.01em}
+.role{font-family:'RC';font-size:14pt;margin:4px 0 12px}
+.loc{font-size:8.5pt;letter-spacing:.16em;margin-bottom:9px}
+.contact p{margin:0 0 2px}
+.contact .gap{margin-top:8px}
+a{color:inherit;text-decoration:none}
+h2{font-family:'RC';font-weight:700;font-size:13pt;margin:15px 0 6px}
+p{margin:0}
+.it{margin:0 0 7px}
+.it b{display:block}
+ul{margin:3px 0 0;padding-left:38px;list-style:circle}
+li{margin:1px 0}
+.cols{display:grid;grid-template-columns:1.1fr 1fr;gap:26px}
+.cols ul{padding-left:20px}
+.sk li b{font-weight:700}
 </style></head><body><div class="page">
-<header><div><h1>Thiago Paniagua</h1><p class="role">Desarrollador Full Stack</p></div>
-<div class="contact">Buenos Aires, Argentina<br><a href="mailto:thiago.paniagua.emp@gmail.com">thiago.paniagua.emp@gmail.com</a><br><a href="https://www.linkedin.com/in/thiagopaniagua/">linkedin.com/in/thiagopaniagua</a><br><a href="https://github.com/thiagopaniagua05">github.com/thiagopaniagua05</a><br><a href="https://thiagopaniagua-dev.vercel.app">thiagopaniagua-dev.vercel.app</a></div></header>
+<header>
+<img class="foto" src="foto.png" alt="">
+<div>
+<h1>THIAGO PANIAGUA</h1>
+<p class="role">Desarrollador Full Stack</p>
+<p class="loc">VILLA RAFFO, BUENOS AIRES, ARGENTINA</p>
+<div class="contact">
+<p>Celular: +54 9 11 3256 1790</p>
+<p>Email: <a href="mailto:thiago.paniagua.emp@gmail.com">thiago.paniagua.emp@gmail.com</a></p>
+<p class="gap">Linkedin: <a href="https://www.linkedin.com/in/thiagopaniagua/">www.linkedin.com/in/thiagopaniagua/</a></p>
+<p>Github: <a href="https://github.com/thiagopaniagua05">github.com/thiagopaniagua05</a></p>
+<p>Portfolio: <a href="https://thiagopaniagua-dev.vercel.app">thiagopaniagua-dev.vercel.app</a></p>
+</div></div></header>
 
-<h2>Perfil</h2>
-<p>Hago aplicaciones web y mobile con React, React Native y Node.js, y ya desarrollé sistemas que hoy usan empresas reales. Me ocupo del proceso completo: relevar lo que se necesita, diseñar la solución, programar frontend, mobile y backend, y publicarla. Disponible para trabajo presencial, híbrido o remoto.</p>
+<h2>PERFIL PROFESIONAL</h2>
+<p>Desarrollador Full Stack. Hago aplicaciones web y mobile con React, React Native y Node.js, y ya desarrollé sistemas que hoy usan empresas reales. Me ocupo del proceso completo: relevar lo que se necesita, diseñar la solución, programar frontend, mobile y backend, y publicarla. Disponible para trabajo presencial, híbrido o remoto.</p>
 
-<h2>Experiencia</h2>
-<div class="item"><div class="item-head"><b>Desarrollador Full Stack</b><span class="when">2026 – actualidad</span></div>
-<p class="place">Proyectos para clientes</p>
-<ul><li>Sistema de botón antipánico: app mobile para empleados (React Native, Expo), central de monitoreo web con mapa y alertas en tiempo real (React, Socket.io) y API con Node.js, Express y MongoDB.</li>
+<h2>EXPERIENCIA LABORAL</h2>
+<div class="it"><b>Desarrollador Full Stack – Proyectos para clientes</b>2026 – Actualidad
+<ul>
+<li>Sistema de botón antipánico: app mobile para empleados (React Native, Expo), central de monitoreo web con mapa y alertas en tiempo real (React, Socket.io) y API con Node.js, Express y MongoDB.</li>
 <li>Tienda online por drops con reserva de prendas en el checkout, pagos con Mercado Pago y panel de ventas y pedidos (React, Firebase).</li>
 <li>Sitio para concesionaria con catálogo de modelos y cuotas editable desde un CMS (Next.js, TypeScript, Payload CMS, PostgreSQL).</li>
-<li>API de seguimiento de flota: jornadas de choferes, posición en vivo, kilómetros y paradas (Node.js, PostgreSQL, Socket.io, Docker).</li></ul></div>
+<li>API de seguimiento de flota: jornadas de choferes, posición en vivo, kilómetros y paradas (Node.js, PostgreSQL, Socket.io, Docker).</li>
+</ul></div>
+<div class="it"><b>Aranz – Asistente Administrativo</b>2024
+<ul><li>Carga y organización de datos en planillas Excel, control de información para ventas de vehículos y orden de documentación.</li></ul></div>
 
-<h2>Proyectos propios</h2>
-<div class="item proj"><b>BudgetFlow</b> <span class="muted">· Finanzas personales con tarjetas, cuotas y presupuestos.</span> <span class="tech">React, Firebase, PWA</span></div>
-<div class="item proj"><b>GymFlow</b> <span class="muted">· Entrenamiento con series, récords y progreso semanal.</span> <span class="tech">React, Firebase, PWA</span></div>
+<h2>PROYECTOS PERSONALES</h2>
+<div class="it"><b>BudgetFlow</b>Finanzas personales con tarjetas, cuotas y presupuestos. React, Firebase y PWA.</div>
+<div class="it"><b>GymFlow</b>Entrenamiento con series, récords y progreso semanal. React, Firebase y PWA.</div>
 
-<h2>Formación</h2>
-<div class="item"><div class="item-head"><b>Tecnicatura Universitaria en Programación</b><span class="when">2025 – actualidad</span></div><p class="place">Universidad Tecnológica Nacional (UTN)</p></div>
-<div class="item"><div class="item-head"><b>Cursos de JavaScript y React</b><span class="when">2024 – 2025</span></div><p class="place">Coderhouse</p></div>
-
-<h2>Stack</h2>
-<dl class="stack">
-<dt>Frontend</dt><dd>React, Next.js, JavaScript, TypeScript, Tailwind CSS, Vite</dd>
-<dt>Mobile</dt><dd>React Native, Expo, notificaciones push, geolocalización</dd>
-<dt>Backend</dt><dd>Node.js, Express, Socket.io, APIs REST, JWT</dd>
-<dt>Datos</dt><dd>MongoDB, PostgreSQL, Firebase, Payload CMS</dd>
-<dt>Herramientas</dt><dd>Git, GitHub, Vercel, Railway, Docker</dd></dl>
-
-<h2>Idiomas</h2><p>Español nativo. Inglés básico.</p>
+<div class="cols">
+<div>
+<h2>EDUCACIÓN</h2>
+<div class="it"><b>Tecnicatura Universitaria en Programación – Universidad Tecnológica Nacional (UTN)</b>2025 – Actualidad</div>
+<div class="it"><b>Cursos de JavaScript y React – Coderhouse</b>2024 – 2025</div>
+</div>
+<div>
+<h2>HABILIDADES</h2>
+<ul class="sk">
+<li><b>Frontend:</b> React, Next.js, JavaScript, TypeScript, Tailwind CSS, Vite.</li>
+<li><b>Mobile:</b> React Native, Expo.</li>
+<li><b>Backend:</b> Node.js, Express, Socket.io, APIs REST, JWT.</li>
+<li><b>Datos:</b> MongoDB, PostgreSQL, Firebase.</li>
+<li><b>Herramientas:</b> Git, GitHub, Vercel, Railway, Docker.</li>
+<li>Inglés básico.</li>
+</ul></div></div>
 </div></body></html>
