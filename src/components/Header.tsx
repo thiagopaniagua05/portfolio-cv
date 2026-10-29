@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Icon from './Icon';
 import { site } from '../data/site';
 
@@ -10,6 +10,19 @@ type Props = { links?: { href: string; label: string }[]; back?: boolean };
 export default function Header({ links = [], back = false }: Props) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('');
+  const linksRef = useRef<HTMLDivElement>(null);
+  const [pill, setPill] = useState({ x: 0, w: 0, on: false });
+
+  // Mueve el rectángulo negro debajo de la sección actual
+  useEffect(() => {
+    const place = () => {
+      const el = linksRef.current?.querySelector<HTMLElement>(`a[href="#${active}"]`);
+      setPill((p) => (el ? { x: el.offsetLeft, w: el.offsetWidth, on: true } : { ...p, on: false }));
+    };
+    place();
+    window.addEventListener('resize', place);
+    return () => window.removeEventListener('resize', place);
+  }, [active]);
 
   // Marca en la barra la sección que se está viendo
   useEffect(() => {
@@ -60,7 +73,12 @@ export default function Header({ links = [], back = false }: Props) {
           <span className="brand-mark" aria-hidden="true">TP</span>
           <span className="brand-name">{site.name}</span>
         </a>
-        <div className="top-links">
+        <div className="top-links" ref={linksRef}>
+          <span
+            className={`nav-pill ${pill.on ? 'is-on' : ''}`}
+            style={{ transform: `translateX(${pill.x}px)`, width: pill.w }}
+            aria-hidden="true"
+          />
           {links.map((l) => (
             <a
               key={l.href}
